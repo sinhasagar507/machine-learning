@@ -1,0 +1,4 @@
+Financial Review Analyzer - A Machine Learning Model which predicts a financial review and classifies it as positive opinion(label 1) or a negative/neutral opinion(label 0). Although
+                            a binary sentiment analyzer, the dataset used for this project was unlabelled initially since I wished to apply some unsupervised learning algorithms for predictions and
+                            also due to the lack of labelled text datasets in the area of finance. I have tried out Turney's algorithm, which uses Parts-of-Speech(POS) tags as keywords for  keyword-based Information
+                            Extraction. The model is still being improved upon, since its an imbalanced dataset aS the F1-score for the underepresented label is low. The project is still ongoing and the repository will be updated at intervals.
