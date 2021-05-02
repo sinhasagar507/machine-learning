@@ -1,5 +1,5 @@
 # Data Science and Machine Learning
-  Repository of projects I am currently working upon or under improvement. Updated regularly.
+  Repository of mini-projects and tasks I am currently working upon or under improvement. Updated regularly.
  
 ## Mini Projects and Tasks
 
