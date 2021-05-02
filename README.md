@@ -8,7 +8,7 @@
 *
 
 ### Indian News Headlines Classifier
-* Unsupervised Classification using Turney's algorithm by extracting Parts-of-Speech(POS) Tags
+* Unsupervised Classification using Turney's algorithm by extracting Parts-of-Speech (POS) Tags
 * Horizontal Feature-Vector Stacking of text-based and numerical features
 * ML modelling with hyperparameter tuning and metric evaluation
 * Visualization and dahboarding
