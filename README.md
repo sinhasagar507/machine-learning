@@ -19,7 +19,7 @@
 * Realtime predictor using a web-based interface and API routes via Flask (Under development)
 
 
-#### Tasks
+### Tasks
 
 #### Exploratory Data Analysis on Global Terrorism datset
 * Data Cleaning, Feature Engineering and Visualization
