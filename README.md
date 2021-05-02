@@ -17,6 +17,6 @@
 ### Loan Upsell Predictor using Machine Learning
 * Built a Classification model on the LTFS Finhack-3 dataset
 * Feature Aggregation and Data Cleansing
-* Realtime predictor using a web-based interface and API routes via Flask(Under development)
+* Realtime predictor using a web-based interface and API routes via Flask (Under development)
 
 
