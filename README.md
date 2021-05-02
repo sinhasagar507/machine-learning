@@ -10,6 +10,7 @@
 * Horizontal Feature-Vector stacking of text-based and numerical features
 * Machine Learning with hyperparameter tuning and metric evaluation
 * Visualization and Dashboarding
+* [Link for repository](https://github.com/sinhasagar507/Data-Science-and-Machine-Learning/tree/main/News%20Headlines%20Predictor)
 
 
 #### Loan Upsell Predictor using Machine Learning
