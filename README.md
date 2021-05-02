@@ -4,4 +4,4 @@
 ## Mini-Projects and Tasks
 
 ### Indian News Headlines Classifier
---* Unsupervised Classification using Turney's algorithm by extracting Parts-of-Speech(POS) Tags
+* Unsupervised Classification using Turney's algorithm by extracting Parts-of-Speech(POS) Tags
