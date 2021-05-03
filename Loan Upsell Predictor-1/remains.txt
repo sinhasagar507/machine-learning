@@ -1,0 +1,4 @@
+What's remaining TBD?
+1. Creating API routes(Flask)
+2. Results page
+3. Responsive home page with Image Layout(Add used tech-stacks).
