@@ -22,7 +22,7 @@
 
 ### Tasks
 
-#### Exploratory Data Analysis on Global Terrorism datset
+#### Exploratory Data Analysis on Global Terrorism dataset
 * Data Cleaning, Feature Engineering and Visualization
 * EDA and Dashboarding
 
