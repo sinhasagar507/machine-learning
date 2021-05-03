@@ -30,6 +30,8 @@
 #### Sunspots-Anomaly Detection (Still Learning)
 * Visualization on Univariate Time-Series Dataset
 * Statistical Packages including Scipy and Statsmodel API
+* * [Link to Repository](https://github.com/sinhasagar507/Data-Science-and-Machine-Learning/tree/main/Univariate%20Time%20Series%20Visualization)
+
 
 
 
