@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Predictor Page</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(149deg, #02c1ff, #29abff 27%, #751ff6), linear-gradient( 180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            font-family: 'Poppins', sans-serif;
+            background-repeat: no-repeat;
+            height: 100%;
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 1rem;
+            width: auto;
+            padding: 2rem 3rem;
+            box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.6);
+        }
+        
+        .form-label {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 style="text-align: center; text-decoration:none; text-transform:uppercase; color:#02c1ff; margin-bottom:1.3rem;"> Predictor</h1>
+        <form class=" row g-3 gy-4" method="POST" action="{{ url_for('predict') }}">
+        
+            <div class="col-md-6 mx-auto ">
+                <label for="EMI " class="form-label ">Monthly EMI</label>
+                <input type="text " class="form-control " id="EMI" placeholder="20000" name="EMI">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Income" class="form-label">Monthly Income</label>
+                <input type="text " class="form-control" id="Income " placeholder="40000" name="Income">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="LTV" class="form-label ">LTV Ratio</label>
+                <input type="text" class="form-control" id="LTV" placeholder="0.8" name="LTV">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Asset-Cost" class="form-label">Asset Cost</label>
+                <input type="text" class="form-control" id="Asset-Cost" placeholder="50000" name="Asset-Cost" name="Asset-Cost">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Age" class="form-label">Age</label>
+                <input type="text" class="form-control" id="Age" placeholder="50" name="Age">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Balance-Mean" class="form-label">Mean of Maximum Current Balance</label>
+                <input type="text" class="form-control" id="Balance Mean" placeholder="60000" name="Balance-Mean">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Current-Bal" class="form-label">Maximum Current Balance</label>
+                <input type="text" class="form-control" id="Current-Bal" placeholder="20000" name="Current-Bal">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Disbursed-Amt " class="form-label ">Maximum Disbursed Amount/High Credit</label>
+                <input type="text" class="form-control" id="Disbursed-Amt" placeholder="40000" name="Disbursed-Amt">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Amt-Fin" class="form-label">Finance Amount</label>
+                <input type="text" class="form-control" id="Amt-Fin" placeholder="50000" name="Amt-Fin">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Min-CBS " class="form-label">Minimum Current Balance Sum</label>
+                <input type="text" class="form-control" id="Min CBS" placeholder="60000" name="Min-CBS">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Delays " class="form-label ">Count of delays in payment</label>
+                <input type="text " class="form-control " id="Delays " placeholder="8" name="Delays">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Payment-PP " class="form-label ">Count of Payments Past Due Date</label>
+                <input type="text" class="form-control " id="Payment PP " placeholder="10" name="Payment-PP">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="Mean-SCB " class="form-label ">Mean of Successive Current Balance Differences</label>
+                <input type="text " class="form-control " id="Mean SCB " placeholder="20000" name="Mean-SCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="Delays-Sum" class="form-label">Sum of count of number of delays in payment of loan</label>
+                <input type="text " class="form-control " id="Delays Sum" placeholder="8" name="Delays-Sum">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="Min-CB" class="form-label">Average of minimum successive Current Balance Differences</label>
+                <input type="text" class="form-control" id="Min-CB" placeholder="40000" name="Min-CB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MC" class="form-label">Mean of month count with no history of prior payment</label>
+                <input type="text" class="form-control" id="MC" placeholder="6" name="MC">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="Max-CB" class="form-label">Minimum of Successive Differences in CB</label>
+                <input type="email" class="form-control " id="Max-CB" placeholder="50000" name="Max-CB">
+            </div>
+            
+             <div class="col-md-6 mx-auto">
+                <label for="HOUT" class="form-label">Mean of Maximum Current Balances for no recorded Payment History</label>
+                <input type="email" class="form-control" id="HOUT" placeholder="50000" name="HOUT">
+             </div>
+            
+             <div class="col-md-6 mx-auto">
+                <label for="MaMiCB" class="form-label">Maximum of Minimum Current Balance</label>
+                <input type="email " class="form-control " id="MaMiCB " placeholder="50000" name="MaMiCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="CB" class="form-label ">Average of Current Balances</label>
+                <input type="text" class="form-control" id="CB " placeholder="60000" name="CB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="Tenure" class="form-label">Tenure</label>
+                <input type="text " class="form-control " id="Tenure " placeholder="5" name="Tenure">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="Mean-BD" class="form-label">Mean of Sum of Successive Current Balance Differences</label>
+                <input type="text " class="form-control " id="Mean BD " placeholder="20000" name="Mean-BD">
+            </div>
+
+            <div class="col-md-6 mx-auto ">
+                <label for="MCHPRP" class="form-label">Sum of month count with no history of prior payment</label>
+                <input type="text" class="form-control" id="MCHPRP" placeholder="6" name="MCHPRP">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MCPPDD" class="form-label">Maximum Count of Payment Past Due Date</label>
+                <input type="text" class="form-control" id="MCPPDD " placeholder="20" name="MCPPDD">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MCNPAYM" class="form-label">Maximum Count of Number of delays in Payment</label>
+                <input type="text " class="form-control " id="MCNPAYM" placeholder="20" name="MCNPAYM">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="HHOPAYM" class="form-label">0 or 1 as per the history of outstanding payments</label>
+                <input type="text" class="form-control" id="HHOPAYM " placeholder="0" name="HHOPAYM">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MMaAPa" class="form-label">Mean of Maximum Amount Paid</label>
+                <input type="text" class="form-control" id="MMaAPa" placeholder="1234 Main St" name="MMaAPa">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MOSOAP" class="form-label">Mean of Sum of Amount Paid</label>
+                <input type="text " class="form-control" id="MOSOSAP " placeholder="20000" name="MOSOAP">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MaMaAP" class="form-label">Maximum of Maximum Amount Paid</label>
+                <input type="text" class="form-control" id="MaMaAP" placeholder="20000" name="MaMaAP">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="HHOPAY" class="form-label ">0 or 1 as per the history of outstanding payments</label>
+                <input type="text" class="form-control " id="HHOPAY " placeholder="0" name="HHOPAY">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MASAP" class="form-label">Maximum of Sum of Amount Paid</label>
+                <input type="text" class="form-control" id="MASAP " placeholder="40000" name="MASAP">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MCNDP" class="form-label">Minimum Count of No. of Delays in Payment</label>
+                <input type="text" class="form-control" id="MCNDP" placeholder="4.0" name="MCNDP">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MASDCB" class="form-label ">Maximum of Average Successive Difference in Current Balance</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="20000" name="MASDCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MiniCB" class="form-label">Minimum Current Balance</label>
+                <input type="text" class="form-control" id="MiniCB " placeholder="40000" name="MiniCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MSSDCB " class="form-label ">Maximum Sum of Successive Differences in Current Balance</label>
+                <input type="text" class="form-control " id="MSSDCB " placeholder="50000" name="MSSDCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="HHOPA " class="form-label ">0 or 1 as per the history of outstanding payments</label>
+                <input type="text" class="form-control" id="HHOPA" placeholder="0" name="HHOPA">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MMCPPDD" class="form-label">Minimum Count of Payments Past  Due Date</label>
+                <input type="text" class="form-control" id="MMCPPDD" placeholder="4" name="MMCPPPD">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MeMCB" class="form-label">Mean of Minimum Current Balance</label>
+                <input type="text" class="form-control" id="MeMCB" placeholder="60000" name="MeMCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MMCB" class="form-label ">Minimum of Minimum Current Balance</label>
+                <input type="text" class="form-control" id="MMCB" placeholder="20000" name="MMCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="01HO" class="form-label">0 or 1 as per the history of outstanding payments</label>
+                <input type="text" class="form-control" id="01HO" placeholder="40000" name="01HO">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="SMCB" class="form-label">Sum of Minimum Current Balance</label>
+                <input type="text" class="form-control" id="SMiCB" placeholder="60000" name="SMCB">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MiMAP" class="form-label">Minimum of Minimum Amount Paid</label>
+                <input type="text" class="form-control" id="MSAP" placeholder="40000" name="MiMAP">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="SMAP" class="form-label">Sum of Minimum Amount Paid</label>
+                <input type="text" class="form-control" id="SMAP" placeholder="50000" name="SMAP">
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <label for="MMAP" class="form-label">Maximum of Minimum Amount Paid</label>
+                <input type="text" class="form-control " id="MMAP" placeholder="50000" name="MMAP">
+            </div>
+
+
+            <div class="col-12 text-center ">
+                <button type="submit " class="btn btn-outline-primary " style="display:inline-block; padding:0.6rem 1.5rem; width:8rem; ">Predict</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js " integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf " crossorigin="anonymous "></script>-->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src=https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js " integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG " crossorigin="anonymous ">
+                </script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js " integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
