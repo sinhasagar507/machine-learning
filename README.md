@@ -18,7 +18,7 @@
 * Feature Aggregation and Data Cleansing
 * Gradient Boosting classifier with Decision Trees
 * Realtime predictor using a web-based interface and API routes via Flask (Under development)
-* [Link to Repository](https://github.com/sinhasagar507/Data-Science-and-Machine-Learning/tree/main/Loan%20Upsell%20Predictor-1)
+* [Link to Repository](https://github.com/sinhasagar507/Data-Science-and-Machine-Learning/tree/main/Loan%20Upsell%20Predictor)
 
 
 ### Tasks
