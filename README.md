@@ -26,6 +26,7 @@
 #### Exploratory Data Analysis on Global Terrorism dataset:
 * Data Cleaning, Feature Engineering and Visualization
 * EDA and Dashboarding
+* [Link to Repository](https://github.com/sinhasagar507/IPython-Notebooks/blob/main/Exploratory%20Data%20Analysis%20-%20Terrorism.ipynb)
 
 #### Sunspots-Anomaly Detection:
 * Visualization on Univariate Time-Series Dataset
