@@ -13,11 +13,11 @@
 * [Link to Repository](https://github.com/sinhasagar507/Data-Science-and-Machine-Learning/tree/main/News%20Headlines%20Predictor)
 
 
-#### Loan Upsell Predictor using Machine Learning(Still learning about deployment):
+#### Loan Upsell Predictor:
 * Built a Classification model on the LTFS Finhack-3 dataset
 * Feature Aggregation and Data Cleansing
 * Gradient Boosting classifier with Decision Trees
-* Realtime predictor using a web-based interface and API routes via Flask (Under development)
+* Realtime predictor using a web-based interface and API routes via Flask 
 * [Link to Repository](https://github.com/sinhasagar507/Data-Science-and-Machine-Learning/tree/main/Loan%20Upsell%20Predictor)
 
 
